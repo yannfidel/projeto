@@ -6,15 +6,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true">
+  <ion-input label="Digite a quantia em reais:" type="number" placeholder="000" [(ngModel)] = "real"></ion-input>
+  <ion-button expand="block" (click)="calcularDolar()">calcular</ion-button>
+  <ion-label>{{res}}</ion-label>
+
+  <ion-input label="Digite a nota de AC:" type="number" placeholder="0" [(ngModel)] = "AC"></ion-input>
+  <ion-input label="Digite a nota da AGH:" type="number" placeholder="0" [(ngModel)] = "AGH"></ion-input>
+  <ion-input label="Digite a nota da AT:" type="number" placeholder="0" [(ngModel)] = "AT"></ion-input>
+  <ion-button expand="block" (click)="calcularMedia()">calcular</ion-button>
+  <ion-label>{{media}}</ion-label>
 </ion-content>
+
+
+
+
